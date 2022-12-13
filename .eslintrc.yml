@@ -16,4 +16,7 @@ parserOptions:
 plugins:
   - '@typescript-eslint'
   - 'prettier'
-rules: {"prettier/prettier": ["error"]}
+rules: {
+  "prettier/prettier": ["error", { "singleQuote": true }],
+  "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.spec.ts", "**/*.spec.tsx", "**/playwright.config.ts"]}]
+}
